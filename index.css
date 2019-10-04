@@ -1,0 +1,32 @@
+* {
+    font-family: sans-serif;
+}
+
+h1, h2, h3 {
+    border-bottom: 2px dotted gray;
+    padding: 10px;
+}
+
+.jobTitle, .course {
+    font-weight: bold;
+}
+
+.tenure {
+    font-style: italic;
+}
+
+body {
+    background-image: radial-gradient(white, #45BACC)
+}
+
+a {
+    text-decoration: none;
+}
+
+@media only screen and (min-width: 426px) {
+    main {
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

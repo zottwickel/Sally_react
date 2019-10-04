@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>Sally Student</title>
+</head>
+<body>
+    <div id="application-root"></div>
+
+    <script
+        src="https://unpkg.com/react@16/umd/react.development.js">
+    </script>
+    <script
+        src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+    </script>
+    <script
+        src="https://unpkg.com/babel-standalone@6/babel.min.js">
+    </script>
+    <script type="text/babel">
+
+        function Contact(props) {
+            return (
+                <header>
+                    <h1>{props.name}</h1>
+                    <img src="https://ia.media-imdb.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_UX214_CR0,0,214,317_AL_.jpg" alt="a picture of Sally" />
+                    <address className="address">
+                        1234 Car st. #30<br/>
+                        Building City, NJ 11111<br/>
+                        <span className="phone">555-555-5555</span><br/>
+                        <a className="email" href="mailto: sally@student.com">sally@student.com</a>
+                    </address>
+                    <h2>Web Developer</h2>
+                    <p>I'm Sally Student, and I'm ready to take on your coding projects with gusto!</p>
+                </header>
+            );
+        }
+
+        function History(props) {
+            return (
+                <section className="history">
+                    <h3>Job History</h3>
+                    <ul>
+                        <li>
+                            <h4>Borealis Cartography</h4>
+                            <p>
+                                <span className="jobTitle">Receptionist</span> - <span className="tenure">2017-2019</span><br/>
+                                Directed calls, took messages, managed scheduling, and coordinated appointments.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>Off-the-hinge Studios</h4>
+                            <p>
+                                <span className="jobTitle">Assistant</span> - <span className="tenure">2013-2017</span><br/>
+                                Managed scheduling, coordinated miscellaneous business needs, managed client issues.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>Lucky's Diner</h4>
+                            <p>
+                                <span className="jobTitle">Waitress</span> - <span className="tenure">2010-2013</span><br/>
+                                Served guests, managed guest checks, provided customer service.
+                            </p>
+                        </li>
+                    </ul>
+                </section>
+            );
+        }
+
+        function Education(props) {
+            return (
+                <section>
+                    <h3>Education</h3>
+                    <ul>
+                        <li>
+                            <h4>Thinkful</h4>
+                            <p>
+                                <span className="course">Engineering Flex</span> - <span className="tenure">2019</span>
+                            </p>
+                        </li>
+                        <li>
+                            <h4>Jersey State College</h4>
+                            <p>
+                                <span className="course">Communications</span> - <span className="tenure">2006-2010</span>
+                            </p>
+                        </li>
+                        <li>
+                            <h4>Building City High School</h4>
+                            <p>
+                                <span className="course">High School</span> - <span className="tenure">2002-2006</span>
+                            </p>
+                        </li>
+                    </ul>
+                </section>
+            );
+        }
+
+        function References(props) {
+            return (
+                <section>
+                    <h3>References</h3>
+                    <ul>
+                        <li>
+                            <h4>John Deacon</h4>
+                            <p>Professor of communications, Jersey state college - 555-555-5555</p>
+                        </li>
+                        <li>
+                            <h4>Jane Collins</h4>
+                            <p>Coworker, Borealis Cartography - 555-555-5555</p>
+                        </li>
+                        <li>
+                            <h4>Bob Jeffries</h4>
+                            <p>Mentor, Thinkful - 555-555-5555</p>
+                        </li>
+                    </ul>
+                </section>
+            )
+        }
+        
+        function App(props) {
+            return (
+                <main>
+                    <Contact name={props.name} />
+                    <History />
+                    <Education />
+                    <References />
+                </main>
+            );
+        }
+
+        ReactDOM.render(
+            <App name="Sally Student" />,
+            document.querySelector('#application-root')
+        );
+    </script>
+</body>
+</html>
